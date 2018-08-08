@@ -1,0 +1,9 @@
+<mat-card class="menu-card">
+    <mat-toolbar class="menu-toolbar">
+        <input placeholder="Найти фильм, актера" [(ngModel)]="searchedFilms" [(ngModel)]="searchedActors">
+
+        <button mat-raised-button (click)="searchFilmsActors()" (click)="searchFilmsEmiter()" (click)="searchActorsEmiter()">Поиск
+        </button>
+    </mat-toolbar>
+</mat-card>
+<p></p>

@@ -1,0 +1,24 @@
+<app-search-films (searchA)="makeSearchActors($event)"></app-search-films>
+
+<mat-grid-list cols="3 " rowHeight="840px">
+  <mat-grid-tile colspan="1 " *ngFor="let actor of actorsData ">
+    <app-actor-item [actor]="actor " [counter]="counter" (star)="makeStarActors($event) "></app-actor-item>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+
+
+<div class="main-container ">
+  <div class="fixer-container ">
+    <button mat-raised-button color="primary" (click)="setPagingActors()" [class.a]="!variantDisplay" [disabled]="false">Загрузить еще</button>
+  </div>
+</div>
+
+<div class="main-container ">
+  <div class="fixer-container ">
+    <button mat-raised-button color="primary" (click)="setPagingSearchActors()" [class.a]="variantDisplay" [disabled]="false">Загрузить еще</button>
+  </div>
+</div>
