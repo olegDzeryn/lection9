@@ -14,26 +14,35 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-//import { config } from 'rxjs';
+// import { config } from 'rxjs';
 import { configService, CONFIG_SERVICE } from './config-service';
 import { Config } from './config';
 
+// import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
+// import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+
+// import { FilmDetailsComponent } from './film-details/film-details.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // FilmDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FilmCatalogModule,
+    RouterModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatTabsModule,
-    MatProgressSpinnerModule
+    // MatToolbarModule,
+    // MatIconModule,
+    // MatButtonModule,
+    // MatCardModule,
+    // MatTabsModule,
+    MatProgressSpinnerModule,
+    FilmCatalogModule
   ],
   providers: [Config,
     { provide: CONFIG_SERVICE, useValue: configService }

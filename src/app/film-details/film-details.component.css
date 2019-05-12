@@ -1,0 +1,8 @@
+.block {
+    /* background-image: -webkit-image-set(); */
+    background-color: rgb(243, 231, 231);
+    background-image: -moz-element()
+}
+.grid_block {
+      background-image: url(https://image.tmdb.org/t/p/w1400_and_h450_face/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg)
+}

@@ -27,7 +27,7 @@ export class ActorsListComponent implements OnInit {
     @ViewChild(SearchComponent) search: SearchComponent;
     makeSearchActors(actorsDataSearch?: Actor[]) {
         this.variantDisplay = false;
-        if (this.router.url === "/actor") {
+        if ((this.router.url === '/main/actor') || (this.router.url === '/actor')) {
             this.actorsData = this.filmsService.getActors();
             console.log(this.actorsData);
         }

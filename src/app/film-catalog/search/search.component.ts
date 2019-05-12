@@ -51,10 +51,10 @@ export class SearchComponent implements OnInit {
 
 
     searchFilmsActors() {
-        if (this.router.url === "/film") {
+        if ((this.router.url === '/main/film') || (this.router.url === '/film')) {
             this.searchFilms();
         } else {
-            if (this.router.url === "/actor") {
+            if ((this.router.url === '/main/actor') || (this.router.url === '/actor')) {
                 this.searchActors();
             }
         }

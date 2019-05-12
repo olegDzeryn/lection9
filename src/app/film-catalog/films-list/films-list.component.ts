@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild, Inject, ElementRef, ViewChildren, QueryList, SimpleChanges } from '@angular/core';
-//import { InjectionToken } from '@angular/core';
+// import { InjectionToken } from '@angular/core';
 import { CONFIG_SERVICE } from '../../config-service';
 import { Config } from '../../config';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ import { Actor } from '../../actor';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: '.films',
+  selector: 'app-films',
   templateUrl: './films-list.component.html',
   styleUrls: ['./films-list.component.css']
 })
@@ -37,10 +37,10 @@ export class FilmsListComponent implements OnInit {
     this.filmsData = this.filmsService.getFilms();
   }
   makeSearchFilms(filmsDataSearch?: Film[]) {
-    if (this.router.url === "/film") {
-      this.variantDisplay = false;
-      this.filmsData = this.filmsService.getFilms()
-    }
+    // if ((this.router.url === "/film") || (this.router.url === 'main/film')) {
+    this.variantDisplay = false;
+    this.filmsData = this.filmsService.getFilms();
+    // }
   }
   setPagingFilms() {
     this.pageFilms++;
